@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const GRID_SLOTS = [
@@ -51,48 +51,23 @@ const SECONDARY_PHOTOS = [
 
 function CrossfadeSlot({
   primary,
-  secondaries,
   label,
-  delay,
+  nextPhoto,
+  isFading,
 }: {
   primary: string;
-  secondaries: string[];
   label: string;
-  delay: number;
+  nextPhoto: string | null;
+  isFading: boolean;
 }) {
   const [current, setCurrent] = useState(primary);
-  const [next, setNext] = useState<string | null>(null);
-  const [fading, setFading] = useState(false);
-
-  const pickRandom = useCallback(() => {
-    const pool = secondaries.filter((s) => s !== current);
-    if (pool.length === 0) return current;
-    return pool[Math.floor(Math.random() * pool.length)];
-  }, [secondaries, current]);
 
   useEffect(() => {
-    const interval = 14000 + Math.random() * 8000;
-
-    const timeout = setTimeout(() => {
-      const swap = () => {
-        const picked = pickRandom();
-        setNext(picked);
-        setFading(true);
-
-        setTimeout(() => {
-          setCurrent(picked);
-          setFading(false);
-          setNext(null);
-        }, 3000);
-      };
-
-      swap();
-      const id = setInterval(swap, interval);
-      return () => clearInterval(id);
-    }, delay);
-
-    return () => clearTimeout(timeout);
-  }, [delay, pickRandom]);
+    if (!isFading && !nextPhoto) return;
+    if (nextPhoto && !isFading) {
+      setCurrent(nextPhoto);
+    }
+  }, [isFading, nextPhoto]);
 
   return (
     <div className="relative aspect-[16/10] overflow-hidden">
@@ -101,12 +76,18 @@ function CrossfadeSlot({
         alt={label}
         className="absolute inset-0 w-full h-full object-cover"
       />
-      {next && (
+      {nextPhoto && (
         <img
-          src={next}
+          src={nextPhoto}
           alt={label}
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[3000ms] ease-in-out"
-          style={{ opacity: fading ? 1 : 0 }}
+          className="absolute inset-0 w-full h-full object-cover transition-opacity ease-in-out"
+          style={{
+            opacity: isFading ? 1 : 0,
+            transitionDuration: "3500ms",
+          }}
+          onTransitionEnd={() => {
+            if (isFading) setCurrent(nextPhoto);
+          }}
         />
       )}
     </div>
@@ -116,6 +97,80 @@ function CrossfadeSlot({
 export default function Culture() {
   const ref = useScrollReveal<HTMLElement>();
   const gridRef = useScrollReveal<HTMLDivElement>(true);
+
+  const [, setActiveSlot] = useState<number | null>(null);
+  const [nextPhotos, setNextPhotos] = useState<(string | null)[]>(
+    () => GRID_SLOTS.map(() => null)
+  );
+  const [fading, setFading] = useState<boolean[]>(
+    () => GRID_SLOTS.map(() => false)
+  );
+  const usedRef = useRef<Set<string>>(new Set());
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const pickUnused = () => {
+      const available = SECONDARY_PHOTOS.filter((p) => !usedRef.current.has(p));
+      if (available.length === 0) {
+        usedRef.current.clear();
+        return SECONDARY_PHOTOS[Math.floor(Math.random() * SECONDARY_PHOTOS.length)];
+      }
+      const picked = available[Math.floor(Math.random() * available.length)];
+      usedRef.current.add(picked);
+      return picked;
+    };
+
+    const cycle = () => {
+      if (cancelled) return;
+
+      const slotIndex = Math.floor(Math.random() * GRID_SLOTS.length);
+      const photo = pickUnused();
+
+      setActiveSlot(slotIndex);
+      setNextPhotos((prev) => {
+        const next = [...prev];
+        next[slotIndex] = photo;
+        return next;
+      });
+
+      requestAnimationFrame(() => {
+        if (cancelled) return;
+        setFading((prev) => {
+          const next = [...prev];
+          next[slotIndex] = true;
+          return next;
+        });
+      });
+
+      setTimeout(() => {
+        if (cancelled) return;
+        setFading((prev) => {
+          const next = [...prev];
+          next[slotIndex] = false;
+          return next;
+        });
+        setNextPhotos((prev) => {
+          const next = [...prev];
+          next[slotIndex] = null;
+          return next;
+        });
+        setActiveSlot(null);
+      }, 4500);
+    };
+
+    const initialDelay = setTimeout(() => {
+      if (cancelled) return;
+      cycle();
+      const id = setInterval(cycle, 8000);
+      return () => clearInterval(id);
+    }, 6000);
+
+    return () => {
+      cancelled = true;
+      clearTimeout(initialDelay);
+    };
+  }, []);
 
   return (
     <section id="culture" ref={ref} className="reveal bg-light-bg py-20 md:py-28">
@@ -141,9 +196,9 @@ export default function Culture() {
             <div key={slot.id} className={`reveal bg-light-bg ${slot.span}`}>
               <CrossfadeSlot
                 primary={slot.primary}
-                secondaries={SECONDARY_PHOTOS}
                 label={slot.label}
-                delay={i * 3000 + 5000}
+                nextPhoto={nextPhotos[i]}
+                isFading={fading[i]}
               />
             </div>
           ))}

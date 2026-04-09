@@ -180,6 +180,6 @@ export const TEAM_MEMBERS = [
     title: "Follow the company",
     linkedin: "https://www.linkedin.com/company/planhat/",
     initials: "PH",
-    photo: "/favicon-light.svg",
+    photo: "/images/planhat-symbol-dark.svg",
   },
 ] as const;
