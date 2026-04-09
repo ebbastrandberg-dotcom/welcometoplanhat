@@ -21,7 +21,7 @@ export default function AIPlatform() {
           your LLM of choice.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-divider mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-divider">
           {AI_VALUE_PROPS.map((v) => (
             <div key={v.num} className="bg-bg p-6 md:p-8">
               <span className="text-white text-sm font-display font-medium mb-2 block">
@@ -34,17 +34,14 @@ export default function AIPlatform() {
           ))}
         </div>
 
-        <div className="bg-white/[0.03] backdrop-blur-lg border border-white/[0.08] rounded-[2px] p-8 md:p-12 text-center max-w-3xl mx-auto">
-          <span className="text-white/30 text-5xl font-display leading-none block mb-4">
-            &ldquo;
-          </span>
-          <blockquote className="text-white/90 font-light text-base md:text-lg leading-relaxed mb-4 italic">
-            Planhat is the first in the market with a generative AI powered
-            health score that can pull customer data from Planhat, as well as
-            incorporate data from the customer's preferred large language model.
-          </blockquote>
-          <cite className="text-muted text-sm not-italic">— Gartner</cite>
-        </div>
+        <a
+          href="https://www.planhat.com/adp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-right text-xs text-muted hover:text-white transition-colors mt-6 md:mt-8"
+        >
+          Learn more on planhat.com &rarr;
+        </a>
       </div>
     </section>
   );

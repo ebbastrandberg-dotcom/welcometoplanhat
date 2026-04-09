@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Geigy";
+  src: url("/fonts/GeigyLLDuplexVarWeb.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-optical-sizing: auto;
+  font-display: swap;
+}
+
 @theme {
   --color-bg: #0e0e0e;
   --color-surface: #111110;
@@ -17,8 +32,8 @@
   --color-light-tertiary: #575551;
   --color-light-divider: rgba(0, 0, 0, 0.08);
 
-  --font-display: "Syne", sans-serif;
-  --font-body: "DM Sans", sans-serif;
+  --font-display: "Geigy", sans-serif;
+  --font-body: "Inter", sans-serif;
 }
 
 body {
@@ -27,6 +42,11 @@ body {
 
 html {
   scroll-padding-top: 4rem;
+}
+
+@keyframes sphere-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .reveal {

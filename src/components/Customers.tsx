@@ -73,6 +73,15 @@ export default function Customers() {
             <LogoItem key={logo.name} name={logo.name} src={logo.src} />
           ))}
         </div>
+
+        <a
+          href="https://www.planhat.com/editorial/theme/impact-study"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-right text-xs text-muted hover:text-white transition-colors mt-6 md:mt-8"
+        >
+          Learn more on planhat.com &rarr;
+        </a>
       </div>
     </section>
   );

@@ -4,7 +4,8 @@ import PlatformStory from "./components/PlatformStory";
 import AIPlatform from "./components/AIPlatform";
 import Recognition from "./components/Recognition";
 import Customers from "./components/Customers";
-import Demo from "./components/Demo";
+
+import Editorial from "./components/Editorial";
 import Culture from "./components/Culture";
 import Team from "./components/Team";
 import Footer from "./components/Footer";
@@ -19,9 +20,9 @@ export default function App() {
         <AIPlatform />
         <Recognition />
         <Customers />
-        <Demo />
         <Culture />
         <Team />
+        <Editorial />
       </main>
       <Footer />
     </>

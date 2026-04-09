@@ -35,6 +35,15 @@ export default function Recognition() {
             </div>
           ))}
         </div>
+
+        <a
+          href="https://www.planhat.com/press"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-right text-xs text-light-muted hover:text-light-text transition-colors mt-6 md:mt-8"
+        >
+          Learn more on planhat.com &rarr;
+        </a>
       </div>
     </section>
   );

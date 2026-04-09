@@ -30,7 +30,7 @@ export default function PlatformStory() {
           {PLATFORM_PILLARS.map((p) => (
             <div
               key={p.num}
-              className="reveal bg-light-bg pt-0 p-6 md:p-8 border-t border-light-text/20"
+              className="reveal bg-light-bg p-6 md:p-8 border-t border-light-text/20"
             >
               <span className="text-light-muted text-sm mb-3 block">
                 {p.num} — {p.title}
@@ -41,6 +41,15 @@ export default function PlatformStory() {
             </div>
           ))}
         </div>
+
+        <a
+          href="https://www.planhat.com/applications"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-right text-xs text-light-muted hover:text-light-text transition-colors mt-6 md:mt-8"
+        >
+          Learn more on planhat.com &rarr;
+        </a>
       </div>
     </section>
   );

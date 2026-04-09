@@ -3,8 +3,9 @@ export const NAV_LINKS = [
   { label: "AI", href: "#ai" },
   { label: "Recognition", href: "#recognition" },
   { label: "Customers", href: "#customers" },
-  { label: "See it in action", href: "#demo" },
+  { label: "Culture", href: "#culture" },
   { label: "The team", href: "#team" },
+  { label: "Editorial", href: "#editorial" },
 ] as const;
 
 export const PLATFORM_PILLARS = [
@@ -112,18 +113,30 @@ export const CUSTOMER_STATS = [
 ] as const;
 
 export const CUSTOMER_LOGOS = [
+  { name: "Instacart", src: "/images/logos/instacart.svg" },
+  { name: "Medtronic", src: "/images/logos/medtronic.svg" },
+  { name: "Nasdaq", src: "/images/logos/nasdaq.svg" },
+  { name: "Tines", src: "/images/logos/tines.svg" },
+  { name: "Revolut", src: "/images/logos/revolut.svg" },
+  { name: "Nutanix", src: "/images/logos/nutanix.svg" },
   { name: "Trustpilot", src: "/images/logos/trustpilot.svg" },
+  { name: "Udacity", src: "/images/logos/udacity.svg" },
   { name: "Grafana", src: "/images/logos/grafana.svg" },
-  { name: "DigitalOcean", src: "/images/logos/digitalocean.svg" },
-  { name: "Synthesia", src: "/images/logos/synthesia.svg" },
-  { name: "Dialpad", src: "/images/logos/dialpad.svg" },
-  { name: "Cyera", src: "/images/logos/cyera.svg" },
-  { name: "Acoustic", src: "/images/logos/acoustic.svg" },
-  { name: "TrendAI", src: "/images/logos/trendai.svg" },
-  { name: "Hoxhunt", src: "/images/logos/hoxhunt.svg" },
-  { name: "Recruitee", src: "/images/logos/recruitee.svg" },
-  { name: "Basis", src: "/images/logos/basis.svg" },
-  { name: "Belkins", src: "/images/logos/belkins.svg" },
+  { name: "Arthrex", src: "/images/logos/arthrex.svg" },
+  { name: "Starship", src: "/images/logos/starship.svg" },
+  { name: "Cision", src: "/images/logos/cision.svg" },
+] as const;
+
+export const OFFICE_LOCATIONS = [
+  { city: "Stockholm", country: "Sweden", lat: 59.33, lng: 18.07 },
+  { city: "Amsterdam", country: "Netherlands", lat: 52.37, lng: 4.90 },
+  { city: "London", country: "UK", lat: 51.51, lng: -0.13 },
+  { city: "New York", country: "US", lat: 40.71, lng: -74.01 },
+  { city: "Boston", country: "US", lat: 42.36, lng: -71.06 },
+  { city: "Atlanta", country: "US", lat: 33.75, lng: -84.39 },
+  { city: "Indianapolis", country: "US", lat: 39.77, lng: -86.16 },
+  { city: "Toronto", country: "Canada", lat: 43.65, lng: -79.38 },
+  { city: "Los Angeles", country: "US", lat: 34.05, lng: -118.24 },
 ] as const;
 
 export const TEAM_MEMBERS = [
@@ -167,6 +180,6 @@ export const TEAM_MEMBERS = [
     title: "Follow the company",
     linkedin: "https://www.linkedin.com/company/planhat/",
     initials: "PH",
-    photo: "/images/planhat-logo.png",
+    photo: "/favicon-light.svg",
   },
 ] as const;
