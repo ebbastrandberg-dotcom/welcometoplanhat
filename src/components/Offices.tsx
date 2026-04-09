@@ -68,7 +68,7 @@ const LAND: [number, number][][] = [
   [[-34, 172], [-34, 178], [-47, 168], [-47, 166], [-38, 172], [-34, 172]],
 ];
 
-const LABEL_CFG: Record<string, { dx: number; dy: number; anchor: string }> = {
+const LABEL_CFG: Record<string, { dx: number; dy: number; anchor: "start" | "middle" | "end" }> = {
   Stockholm: { dx: 8, dy: 4, anchor: "start" },
   Amsterdam: { dx: 8, dy: 4, anchor: "start" },
   London: { dx: -8, dy: 4, anchor: "end" },
@@ -120,7 +120,7 @@ export default function Offices() {
 
   const offices = OFFICE_LOCATIONS.map((o) => {
     const [x, y] = project(o.lat, o.lng);
-    const cfg = LABEL_CFG[o.city] ?? { dx: 8, dy: 4, anchor: "start" };
+    const cfg = LABEL_CFG[o.city] ?? { dx: 8, dy: 4, anchor: "start" as const };
     return { ...o, x, y, ...cfg };
   });
 

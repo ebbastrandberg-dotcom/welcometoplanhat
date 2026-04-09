@@ -12,13 +12,41 @@ const GRID_SLOTS = [
 ];
 
 const SECONDARY_PHOTOS = [
-  "/images/culture-1.jpg",
-  "/images/culture-2.jpg",
-  "/images/culture-3.jpg",
-  "/images/culture-4.jpg",
-  "/images/culture-5.jpg",
-  "/images/culture-6.jpg",
-  "/images/culture-7.jpg",
+  "/images/culture-s1.jpg",
+  "/images/culture-s2.jpg",
+  "/images/culture-s3.jpg",
+  "/images/culture-s4.jpg",
+  "/images/culture-s5.jpg",
+  "/images/culture-s6.jpg",
+  "/images/culture-s7.jpg",
+  "/images/culture-s8.jpg",
+  "/images/culture-s9.jpg",
+  "/images/culture-s10.jpg",
+  "/images/culture-s11.jpg",
+  "/images/culture-s12.jpg",
+  "/images/culture-s13.jpg",
+  "/images/culture-s14.jpg",
+  "/images/culture-s15.jpg",
+  "/images/culture-s16.jpg",
+  "/images/culture-s17.jpg",
+  "/images/culture-s18.jpg",
+  "/images/culture-s19.jpg",
+  "/images/culture-s20.jpg",
+  "/images/culture-s21.jpg",
+  "/images/culture-s22.jpg",
+  "/images/culture-s23.jpg",
+  "/images/culture-s24.jpg",
+  "/images/culture-s25.jpg",
+  "/images/culture-s26.jpg",
+  "/images/culture-s27.jpg",
+  "/images/culture-s28.jpg",
+  "/images/culture-s29.jpg",
+  "/images/culture-s30.jpg",
+  "/images/culture-s31.jpg",
+  "/images/culture-s32.jpg",
+  "/images/culture-s33.jpg",
+  "/images/culture-s34.jpg",
+  "/images/culture-s35.jpg",
 ];
 
 function CrossfadeSlot({
@@ -43,7 +71,7 @@ function CrossfadeSlot({
   }, [secondaries, current]);
 
   useEffect(() => {
-    const interval = 6000 + Math.random() * 4000;
+    const interval = 14000 + Math.random() * 8000;
 
     const timeout = setTimeout(() => {
       const swap = () => {
@@ -55,7 +83,7 @@ function CrossfadeSlot({
           setCurrent(picked);
           setFading(false);
           setNext(null);
-        }, 1500);
+        }, 3000);
       };
 
       swap();
@@ -77,7 +105,7 @@ function CrossfadeSlot({
         <img
           src={next}
           alt={label}
-          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out"
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-[3000ms] ease-in-out"
           style={{ opacity: fading ? 1 : 0 }}
         />
       )}
@@ -115,7 +143,7 @@ export default function Culture() {
                 primary={slot.primary}
                 secondaries={SECONDARY_PHOTOS}
                 label={slot.label}
-                delay={i * 2000 + 3000}
+                delay={i * 3000 + 5000}
               />
             </div>
           ))}
