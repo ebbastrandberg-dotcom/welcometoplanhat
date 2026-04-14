@@ -51,16 +51,12 @@ export default function Hero() {
 
         <div className="flex flex-wrap gap-4">
           <a
-            href="#platform"
+            href="https://www.planhat.com/editorial/ai-for-commercial-teams"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 border border-white text-white text-sm font-body uppercase tracking-[0.08em] rounded-[2px] hover:bg-white/10 transition"
           >
-            See the platform <span aria-hidden="true">&gt;</span>
-          </a>
-          <a
-            href="#demo"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white text-sm font-body uppercase tracking-[0.08em] rounded-[2px] hover:border-white/60 transition"
-          >
-            Watch the demo <span aria-hidden="true">&gt;</span>
+            AI for commercial teams <span aria-hidden="true">&gt;</span>
           </a>
         </div>
       </div>

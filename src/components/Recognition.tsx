@@ -9,12 +9,17 @@ export default function Recognition() {
     <section id="recognition" ref={ref} className="reveal bg-light-bg py-20 md:py-28">
       <div className="max-w-[1100px] mx-auto px-6 md:px-12">
         <span className="uppercase text-light-muted text-[0.72rem] tracking-[0.15em] mb-6 block">
-          Market recognition
+          The leading customer platform
         </span>
 
-        <h2 className="font-display font-normal text-light-text text-3xl md:text-5xl tracking-[-0.03em] mb-14 leading-tight">
-          Planhat is a leader.
+        <h2 className="font-display font-normal text-light-text text-3xl md:text-5xl tracking-[-0.03em] mb-4 leading-tight">
+          The next generation has arrived
         </h2>
+
+        <p className="text-light-muted font-light text-base md:text-lg max-w-2xl mb-14 leading-relaxed">
+          Planhat is recognized by both industry analysts and customers as a
+          global leader in deploying AI-led automation for go-to-market teams.
+        </p>
 
         <div
           ref={gridRef}
