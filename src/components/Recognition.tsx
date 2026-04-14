@@ -1,5 +1,39 @@
+import { useState } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 import { RECOGNITION_ITEMS } from "../data/content";
+
+function BadgeLogo({ name, src }: { name: string; src: string }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <span className="text-light-text font-display font-bold text-lg tracking-wide">
+        {name}
+      </span>
+    );
+  }
+
+  return (
+    <img
+      src={src}
+      alt={name}
+      onError={() => setFailed(true)}
+      className={`w-auto ${name === "G2" ? "h-10 md:h-12" : "h-6 md:h-8"}`}
+    />
+  );
+}
+
+function Stars() {
+  return (
+    <span className="flex items-center gap-0.5 text-light-text text-sm">
+      {"★★★★"}
+      <span className="relative inline-block overflow-hidden" style={{ width: "1em" }}>
+        <span className="text-light-text/20">★</span>
+        <span className="absolute left-0 top-0 overflow-hidden" style={{ width: "60%" }}>★</span>
+      </span>
+    </span>
+  );
+}
 
 export default function Recognition() {
   const ref = useScrollReveal<HTMLElement>();
@@ -23,20 +57,30 @@ export default function Recognition() {
 
         <div
           ref={gridRef}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-light-divider"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6"
         >
-          {RECOGNITION_ITEMS.map((item, i) => (
-            <div key={i} className="reveal bg-light-bg p-6 md:p-8 flex flex-col">
-              <span className="uppercase text-light-muted text-[0.72rem] tracking-[0.15em] mb-4">
-                {item.org}
-              </span>
-              <p className="text-light-text font-display font-semibold text-sm leading-snug mb-4 flex-1">
-                {item.award}
+          {RECOGNITION_ITEMS.map((item) => (
+            <div
+              key={item.name}
+              className="reveal border border-light-text/10 rounded-lg p-6 md:p-8 flex flex-col items-center text-center gap-4"
+            >
+              <div className="h-5 flex items-center justify-center">
+                {item.topLabel === "stars" ? (
+                  <Stars />
+                ) : (
+                  <span className="uppercase text-light-muted text-[0.65rem] tracking-[0.15em]">
+                    {item.topLabel}
+                  </span>
+                )}
+              </div>
+
+              <div className="h-12 flex items-center justify-center">
+                <BadgeLogo name={item.name} src={item.logo} />
+              </div>
+
+              <p className="text-light-muted font-light text-xs leading-relaxed">
+                {item.desc}
               </p>
-              {/* Small badge -- accent kept here */}
-              <span className="inline-block self-start px-3 py-1 text-[0.7rem] uppercase tracking-[0.1em] text-accent border border-accent/30 bg-accent-light rounded-[2px]">
-                {item.badge}
-              </span>
             </div>
           ))}
         </div>

@@ -19,8 +19,9 @@ export default function PlatformStory() {
         </h2>
 
         <p className="text-light-muted font-light text-base md:text-lg max-w-2xl mb-14 leading-relaxed">
-          Planhat centralizes commercial reality, deploys AI agents across it,
-          and keeps humans in control. This is the Loop.
+          Planhats offers a comprehensive platform that empowers artificial and
+          human intelligence to collaborate seamlessly across the entire
+          customer lifecycle.
         </p>
 
         <div
@@ -29,11 +30,11 @@ export default function PlatformStory() {
         >
           {PLATFORM_PILLARS.map((p) => (
             <div
-              key={p.num}
+              key={p.title}
               className="reveal bg-light-bg p-6 md:p-8 border-t border-light-text/20"
             >
               <span className="text-light-muted text-sm mb-3 block">
-                {p.num} — {p.title}
+                {p.title}
               </span>
               <p className="text-light-tertiary font-light text-sm leading-relaxed">
                 {p.desc}

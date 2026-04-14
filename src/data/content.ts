@@ -2,7 +2,7 @@ export const NAV_LINKS = [
   { label: "The Platform", href: "#platform" },
   { label: "AI", href: "#ai" },
   { label: "Recognition", href: "#recognition" },
-  { label: "Customers", href: "#customers" },
+  { label: "Customer Impact", href: "#customers" },
   { label: "Culture", href: "#culture" },
   { label: "The team", href: "#team" },
   { label: "Editorial", href: "#editorial" },
@@ -10,19 +10,19 @@ export const NAV_LINKS = [
 
 export const PLATFORM_PILLARS = [
   {
-    num: "01",
-    title: "Context",
-    desc: "Planhat centralizes and models your commercial reality over time — revenue, usage, signals, activity, communications, process history.",
+    num: "",
+    title: "Assemble your GTM under one roof",
+    desc: "Arm your go-to-market agents, teams and tools with rich context that turns post-sale truth into pre-sales intelligence.",
   },
   {
-    num: "02",
-    title: "Agents",
-    desc: "Trustworthy deployment of AI automation, informed by your commercial context, not disconnected from it.",
+    num: "",
+    title: "Deploy agents with confidence",
+    desc: "Delegate processes to tightly governed agents which execute with greater speed and precision than humanly possible.",
   },
   {
-    num: "03",
-    title: "Human & AI collaboration",
-    desc: "AI and human collaboration in one system, architected around how your teams actually work.",
+    num: "",
+    title: "Stay in-the-loop",
+    desc: "Give your team the capability to leverage, supervise and enhance agentic outputs at scale.",
   },
 ] as const;
 
@@ -64,51 +64,76 @@ export const AI_USE_CASES = [
 
 export const RECOGNITION_ITEMS = [
   {
-    org: "Gartner",
-    award: "Magic Quadrant™ for Customer Success Management Platforms",
-    badge: "Leader",
+    name: "Gartner",
+    logo: "/images/logos/gartner.svg",
+    topLabel: "2025 LEADER",
+    desc: "Gartner Magic Quadrant\u2122 for Customer Success Management Platforms",
   },
   {
-    org: "Gartner",
-    award: "Leader — 2024 & 2025 (moved up year-over-year)",
-    badge: "Leader",
+    name: "G2",
+    logo: "/images/logos/g2.svg",
+    topLabel: "stars",
+    desc: "G2 Momentum Grid and Leader in 9 Categories. Based on 880+ Verified Planhat Customer Reviews.",
   },
   {
-    org: "IDC",
-    award: "IDC MarketScape — Leader",
-    badge: "Leader",
-  },
-  {
-    org: "G2",
-    award: "Momentum Grid Leader across 9 categories",
-    badge: "Leader",
+    name: "IDC",
+    logo: "/images/logos/idc.svg",
+    topLabel: "2024 LEADER",
+    desc: "IDC MarketScape for Worldwide Customer Success Applications",
   },
 ] as const;
 
-export const CUSTOMER_STATS = [
+export const CUSTOMER_STATS_OPS = [
   {
     stat: "100+",
     label: "hours saved",
-    quote: "Saved more than 100 hours automating email outreach in the first month",
-    company: "TRUSTPILOT",
+    quote: "We saved more than 100 hours automating email outreach during the first month of using Planhat",
+    company: "Trustpilot",
   },
   {
     stat: "22%",
     label: "faster onboarding",
-    quote: "Decreased project onboarding time from 9 to 7 business days",
-    company: "MACROBOND",
+    quote: "We managed to decrease our project onboarding time from 9 to 7 business days",
+    company: "Belkins",
   },
+  {
+    stat: "100%",
+    label: "increased capacity",
+    quote: "We went from onboarding 7-10 customers to successfully onboarding 20+ per CSM",
+    company: "Hoxhunt",
+  },
+  {
+    stat: "5+",
+    label: "headcount saved",
+    quote: "Planhat has saved us around 5 people in terms of headcount without sacrificing service quality",
+    company: "Basis",
+  },
+] as const;
+
+export const CUSTOMER_STATS_REVENUE = [
   {
     stat: "20%",
     label: "less churn",
-    quote: "Came in with 20% lower churn than budgeted within the first year",
-    company: "THRIVE LEARNING",
+    quote: "We came in with 20% lower churn than we had budgeted within the first year",
+    company: "Macrobond",
+  },
+  {
+    stat: "24%",
+    label: "increased upsells",
+    quote: "Our license upsells are 24% higher this year since we now understand our customers better",
+    company: "Thrive Learning",
   },
   {
     stat: "500%",
-    label: "increased upsells",
-    quote: "Ability to identify customers due for an upgrade boosted expansion by 500% in 1 month",
-    company: "SIMPLE POLL",
+    label: "increased scaled segment upsells",
+    quote: "Our ability to identify customers due for an upgrade boosted our expansion by 500% in 1 month",
+    company: "Simple Poll",
+  },
+  {
+    stat: "10%",
+    label: "increased net retention",
+    quote: "In just 1 year, Planhat empowered us to increase customer retention by 10%",
+    company: "Recruitee",
   },
 ] as const;
 
