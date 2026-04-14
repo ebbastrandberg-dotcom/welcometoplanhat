@@ -18,11 +18,22 @@ export default function PlatformStory() {
           The entire customer lifecycle.
         </h2>
 
-        <p className="text-light-muted font-light text-base md:text-lg max-w-2xl mb-14 leading-relaxed">
+        <p className="text-light-muted font-light text-base md:text-lg max-w-2xl mb-10 leading-relaxed">
           Planhat offers a comprehensive platform that empowers artificial and
           human intelligence to collaborate seamlessly across the entire
           customer lifecycle.
         </p>
+
+        <div className="mb-14 rounded-lg overflow-hidden">
+          <video
+            src="/videos/platform-loop.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-auto"
+          />
+        </div>
 
         <div
           ref={gridRef}

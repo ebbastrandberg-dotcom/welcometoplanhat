@@ -14,7 +14,7 @@ export function useScrollReveal<T extends HTMLElement>(stagger = false) {
 
         if (stagger) {
           Array.from(el.children).forEach((child, i) => {
-            (child as HTMLElement).style.transitionDelay = `${i * 0.1}s`;
+            (child as HTMLElement).style.transitionDelay = `${i * 0.08}s`;
             child.classList.add("revealed");
           });
         }
