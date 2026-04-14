@@ -1,5 +1,6 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import RoleOverview from "./components/RoleOverview";
 import PlatformStory from "./components/PlatformStory";
 import AIPlatform from "./components/AIPlatform";
 import Recognition from "./components/Recognition";
@@ -16,12 +17,13 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <RoleOverview />
+        <Culture />
+        <Team />
         <PlatformStory />
         <AIPlatform />
         <Recognition />
         <Customers />
-        <Culture />
-        <Team />
         <Editorial />
       </main>
       <Footer />
