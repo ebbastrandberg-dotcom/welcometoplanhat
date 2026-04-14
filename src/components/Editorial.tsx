@@ -64,13 +64,13 @@ export default function Editorial() {
   const gridRef = useScrollReveal<HTMLDivElement>(true);
 
   return (
-    <section id="editorial" ref={ref} className="reveal bg-light-bg py-14 md:py-20">
+    <section id="editorial" ref={ref} className="reveal bg-light-bg py-20 md:py-28">
       <div className="max-w-[1100px] mx-auto px-6 md:px-12">
-        <span className="uppercase text-light-muted text-[0.72rem] tracking-[0.15em] mb-3 block">
+        <span className="uppercase text-light-muted text-[0.72rem] tracking-[0.15em] mb-6 block">
           Highlights from the inside
         </span>
 
-        <h2 className="font-display font-normal text-light-text text-3xl md:text-5xl tracking-[-0.03em] mb-8 leading-tight">
+        <h2 className="font-display font-normal text-light-text text-3xl md:text-5xl tracking-[-0.03em] mb-14 leading-tight">
           What we think, share and believe.
         </h2>
 

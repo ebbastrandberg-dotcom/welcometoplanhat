@@ -19,7 +19,7 @@ export default function PlatformStory() {
         </h2>
 
         <p className="text-light-muted font-light text-base md:text-lg max-w-2xl mb-14 leading-relaxed">
-          Planhats offers a comprehensive platform that empowers artificial and
+          Planhat offers a comprehensive platform that empowers artificial and
           human intelligence to collaborate seamlessly across the entire
           customer lifecycle.
         </p>

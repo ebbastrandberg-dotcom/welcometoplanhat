@@ -25,7 +25,7 @@ export default function AIPlatform() {
           {AI_VALUE_PROPS.map((v) => (
             <div key={v.num} className="bg-bg p-6 md:p-8">
               <span className="text-white text-sm font-display font-medium mb-2 block">
-                {v.num} — {v.title}
+                {v.title}
               </span>
               <p className="text-white/70 font-light text-sm leading-relaxed">
                 {v.desc}
