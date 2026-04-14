@@ -83,14 +83,14 @@ export default function Editorial() {
               rel="noopener noreferrer"
               className="reveal flex items-center justify-between py-3.5 group hover:bg-black/[0.02] transition-colors -mx-3 px-3 rounded"
             >
-              <div className="flex items-center gap-4 min-w-0">
+              <div className="flex items-center gap-4 min-w-0 flex-1">
                 <span className="uppercase text-[0.6rem] tracking-[0.12em] text-light-muted/50 w-10 shrink-0">
                   {item.type}
                 </span>
-                <span className="font-display font-semibold text-light-text text-sm group-hover:text-light-text/80 transition-colors truncate">
+                <span className="font-display font-semibold text-light-text text-sm group-hover:text-light-text/80 transition-colors truncate min-w-0">
                   {item.title}
                 </span>
-                <span className="text-light-muted font-light text-sm hidden md:inline truncate">
+                <span className="text-light-muted font-light text-sm hidden md:inline truncate min-w-0 shrink">
                   {item.author}{item.role ? `, ${item.role}` : ""}
                 </span>
               </div>

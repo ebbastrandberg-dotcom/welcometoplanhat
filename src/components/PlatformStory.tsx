@@ -42,9 +42,9 @@ export default function PlatformStory() {
           {PLATFORM_PILLARS.map((p) => (
             <div
               key={p.title}
-              className="reveal bg-light-bg p-6 md:p-8 border-t border-light-text/20"
+              className="reveal bg-light-bg p-6 md:p-8 border-t-2 border-accent"
             >
-              <span className="text-light-muted text-sm mb-3 block">
+              <span className="text-light-text font-display font-semibold text-base mb-3 block">
                 {p.title}
               </span>
               <p className="text-light-tertiary font-light text-sm leading-relaxed">
