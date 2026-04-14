@@ -52,7 +52,7 @@ export default function AIPlatform() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-divider mb-10">
           {AI_VALUE_PROPS.map((v) => (
-            <div key={v.num} className="bg-bg p-6 md:p-8 border-b border-accent/40">
+            <div key={v.num} className="bg-bg p-6 md:p-8 border-t border-b border-accent/40">
               <span className="text-white text-sm font-display font-semibold mb-2 block">
                 {v.title}
               </span>
