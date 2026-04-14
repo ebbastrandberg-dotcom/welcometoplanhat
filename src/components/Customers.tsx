@@ -1,27 +1,5 @@
-import { useState } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
-import { CUSTOMER_STATS, CUSTOMER_LOGOS } from "../data/content";
-
-function LogoItem({ name, src }: { name: string; src: string }) {
-  const [failed, setFailed] = useState(false);
-
-  if (failed) {
-    return (
-      <span className="text-muted/60 text-sm font-display font-medium tracking-wide">
-        {name}
-      </span>
-    );
-  }
-
-  return (
-    <img
-      src={src}
-      alt={name}
-      onError={() => setFailed(true)}
-      className="h-6 md:h-7 w-auto opacity-50 hover:opacity-80 transition-opacity duration-200 grayscale invert"
-    />
-  );
-}
+import { CUSTOMER_STATS } from "../data/content";
 
 export default function Customers() {
   const ref = useScrollReveal<HTMLElement>();
@@ -46,7 +24,7 @@ export default function Customers() {
 
         <div
           ref={statsRef}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-divider mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-divider"
         >
           {CUSTOMER_STATS.map((s) => (
             <div
@@ -67,20 +45,13 @@ export default function Customers() {
           ))}
         </div>
 
-        {/* Logo strip */}
-        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
-          {CUSTOMER_LOGOS.map((logo) => (
-            <LogoItem key={logo.name} name={logo.name} src={logo.src} />
-          ))}
-        </div>
-
         <a
           href="https://www.planhat.com/editorial/theme/impact-study"
           target="_blank"
           rel="noopener noreferrer"
           className="block text-right text-xs text-muted hover:text-white transition-colors mt-6 md:mt-8"
         >
-          Learn more on planhat.com &rarr;
+          Learn more about our customers &rarr;
         </a>
       </div>
     </section>

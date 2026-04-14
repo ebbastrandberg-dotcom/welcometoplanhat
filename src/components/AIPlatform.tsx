@@ -40,7 +40,7 @@ export default function AIPlatform() {
           rel="noopener noreferrer"
           className="block text-right text-xs text-muted hover:text-white transition-colors mt-6 md:mt-8"
         >
-          Learn more on planhat.com &rarr;
+          Learn more about Planhat AI &rarr;
         </a>
       </div>
     </section>

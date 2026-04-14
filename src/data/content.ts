@@ -90,25 +90,25 @@ export const CUSTOMER_STATS = [
     stat: "100+",
     label: "hours saved",
     quote: "Saved more than 100 hours automating email outreach in the first month",
-    company: "Trustpilot",
+    company: "TRUSTPILOT",
   },
   {
     stat: "22%",
     label: "faster onboarding",
     quote: "Decreased project onboarding time from 9 to 7 business days",
-    company: "Macrobond",
+    company: "MACROBOND",
   },
   {
     stat: "20%",
     label: "less churn",
     quote: "Came in with 20% lower churn than budgeted within the first year",
-    company: "Thrive Learning",
+    company: "THRIVE LEARNING",
   },
   {
     stat: "500%",
     label: "increased upsells",
     quote: "Ability to identify customers due for an upgrade boosted expansion by 500% in 1 month",
-    company: "Simple Poll",
+    company: "SIMPLE POLL",
   },
 ] as const;
 
@@ -177,9 +177,9 @@ export const TEAM_MEMBERS = [
   },
   {
     name: "Planhat",
-    title: "Follow the company",
+    title: "The Company",
     linkedin: "https://www.linkedin.com/company/planhat/",
     initials: "PH",
-    photo: "/images/planhat-symbol-dark.svg",
+    photo: "/images/planhat-symbol.svg",
   },
 ] as const;

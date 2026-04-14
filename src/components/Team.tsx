@@ -17,12 +17,12 @@ function Avatar({ src, initials, name, isLogo }: { src: string; initials: string
 
   if (isLogo) {
     return (
-      <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 overflow-hidden">
+      <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mb-4 overflow-hidden">
         <img
           src={src}
           alt={name}
           onError={() => setFailed(true)}
-          className="w-[70%] h-[70%] object-contain"
+          className="w-[60%] h-[60%] object-contain"
         />
       </div>
     );

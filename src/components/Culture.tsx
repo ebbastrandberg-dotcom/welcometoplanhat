@@ -72,7 +72,7 @@ export default function Culture() {
           rel="noopener noreferrer"
           className="block text-right text-xs text-light-muted hover:text-light-text transition-colors mt-6 md:mt-8"
         >
-          Learn more on planhat.com &rarr;
+          Learn more about our culture &rarr;
         </a>
       </div>
     </section>

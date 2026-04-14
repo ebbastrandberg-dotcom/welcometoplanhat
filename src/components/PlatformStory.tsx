@@ -48,7 +48,7 @@ export default function PlatformStory() {
           rel="noopener noreferrer"
           className="block text-right text-xs text-light-muted hover:text-light-text transition-colors mt-6 md:mt-8"
         >
-          Learn more on planhat.com &rarr;
+          Learn more about the platform &rarr;
         </a>
       </div>
     </section>

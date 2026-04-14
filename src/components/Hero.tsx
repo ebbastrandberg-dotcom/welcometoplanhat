@@ -58,6 +58,14 @@ export default function Hero() {
           >
             AI for commercial teams <span aria-hidden="true">&gt;</span>
           </a>
+          <a
+            href="https://www.planhat.com/editorial/sovereign-sentinel"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-white text-white text-sm font-body uppercase tracking-[0.08em] rounded-[2px] hover:bg-white/10 transition"
+          >
+            Sovereign Sentinel <span aria-hidden="true">&gt;</span>
+          </a>
         </div>
       </div>
 
