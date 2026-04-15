@@ -187,11 +187,11 @@ export const TEAM_MEMBERS = [
     photo: "/images/ambera-cruz.png",
   },
   {
-    name: "Alberto Lambert",
-    title: "Creative Director",
-    linkedin: "https://www.linkedin.com/in/albertolambert/",
-    initials: "AL",
-    photo: "/images/alberto-lambert.png",
+    name: "Thomas Smeallie",
+    title: "VP of Sales Americas",
+    linkedin: "https://www.linkedin.com/in/thomas-smeallie-34891012/",
+    initials: "TS",
+    photo: "/images/thomas-smeallie.png",
   },
   {
     name: "Michael Gorodisher",
