@@ -1,3 +1,4 @@
+import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import RoleOverview from "./components/RoleOverview";
 import PlatformStory from "./components/PlatformStory";
@@ -13,6 +14,7 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
+      <Nav />
       <main>
         <Hero />
         <RoleOverview />
