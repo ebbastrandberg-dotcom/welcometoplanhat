@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useScrollReveal } from "../hooks/useScrollReveal";
+import { VP_REVOPS_ROLE_DESCRIPTION } from "../data/content";
 
 export default function Hero() {
   const ref = useScrollReveal<HTMLElement>();
@@ -34,7 +35,8 @@ export default function Hero() {
 
       <div className="max-w-[1100px] mx-auto px-6 md:px-12 w-full relative z-10 pt-20">
         <span className="uppercase text-white/70 text-[0.8rem] tracking-[0.15em] font-body font-normal mb-6 block">
-          Job Opportunity: <span className="font-semibold">VP of Revenue Operations</span>
+          Job Opportunity:{" "}
+          <span className="font-semibold">Vice President of Revenue Operations</span>
         </span>
 
         <h1 className="font-display font-normal text-white text-4xl md:text-[3.75rem] leading-[1.05] tracking-[-0.03em] max-w-4xl mb-6">
@@ -43,10 +45,12 @@ export default function Hero() {
           is being built here.
         </h1>
 
+        <span className="uppercase text-white/60 text-[0.65rem] tracking-[0.15em] font-body font-normal mb-3 block">
+          Role description
+        </span>
+
         <p className="text-white/70 font-light text-base md:text-xl max-w-2xl mb-10 leading-relaxed">
-          We received an overwhelming response to this role and we're humbled
-          by it. While we work through applications, we wanted to share what
-          we're building. Because whoever joins us will be at the center of it.
+          {VP_REVOPS_ROLE_DESCRIPTION}
         </p>
 
         <div className="flex flex-wrap gap-4">

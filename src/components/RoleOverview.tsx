@@ -16,9 +16,6 @@ const LIST = "space-y-1 pl-0 list-none";
 const COMPANY_DESCRIPTION =
   "Planhat is the Agentic Customer Platform where commercial teams work better. We build and deploy frontier technologies, integrating data, AI and collaboration. We are dedicated to delivering impactful solutions that drive success for our clients.";
 
-const ROLE_DESCRIPTION =
-  "We're hiring a Vice President of Revenue Operations to lead our revenue operations team, owning processes from data and systems to process and performance. The Vice President of Revenue Operations will collaborate closely with senior leadership, sales teams, and other departments to ensure alignment with company goals and objectives.";
-
 const RESPONSIBILITY_SECTIONS: { title: string; items: string[] }[] = [
   {
     title: "Sales Strategy",
@@ -96,10 +93,6 @@ export default function RoleOverview() {
             <div>
               <span className={SECTION_LABEL}>Company</span>
               <p className={BODY}>{COMPANY_DESCRIPTION}</p>
-            </div>
-            <div>
-              <span className={SECTION_LABEL}>Role description</span>
-              <p className={BODY}>{ROLE_DESCRIPTION}</p>
             </div>
             <div>
               <span className={SECTION_LABEL}>Qualifications</span>

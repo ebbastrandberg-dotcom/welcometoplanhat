@@ -8,6 +8,10 @@ export const NAV_LINKS = [
   { label: "Editorial", href: "#editorial" },
 ] as const;
 
+/** Shared copy for VP RevOps role (hero intro). */
+export const VP_REVOPS_ROLE_DESCRIPTION =
+  "We're hiring a VP of RevOps to lead our revenue operations team, owning processes from data and systems to process and performance. The VP of RevOps will collaborate closely with senior leadership, sales teams, and other departments to ensure alignment with company goals and objectives." as const;
+
 export const PLATFORM_PILLARS = [
   {
     num: "",
